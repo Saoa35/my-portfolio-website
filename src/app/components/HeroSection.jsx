@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import { TypeAnimation } from "react-type-animation";
 
 export const HeroSection = () => {
   return (
@@ -7,10 +10,22 @@ export const HeroSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-900">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-900">
               Hello, I`m{" "}
             </span>
-            Oleksandr
+            <TypeAnimation
+              sequence={[
+                "Oleksandr",
+                2000,
+                "Web Developer",
+                2000,
+                "Mobile Developer",
+                2000,
+              ]}
+              wrapper="span"
+              speed={20}
+              repeat={Infinity}
+            />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Front End developer with 1 year experience in web developing.
