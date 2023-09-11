@@ -28,7 +28,7 @@ export const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Web development, creative, learning new technology and implementing
+            Web development, creation, learning new technology and implementing
             them into live is a passion.
           </p>
           <div>
