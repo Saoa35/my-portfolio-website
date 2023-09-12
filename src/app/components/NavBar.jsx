@@ -21,7 +21,7 @@ const navLinks = [
 ];
 
 export const NavBar = () => {
-  const [navBarOpen, setNavBarOpen] = useState(true);
+  const [navBarOpen, setNavBarOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90">
@@ -30,12 +30,20 @@ export const NavBar = () => {
           My portfolio
         </Link>
         <div className="mobile-menu block md:hidden">
-          {navBarOpen ? (
-            <button className="text-slate-200 flex items-center px-3 py-2 border rounded">
+          {!navBarOpen ? (
+            <button
+              onClick={() => setNavBarOpen(true)}
+              className="text-slate-200 flex items-center px-2 py-1 border rounded border-slate-200 hover:text-white hover:border-white hover:scale-110"
+            >
               <Bars3Icon className="w-5 h-5" />
             </button>
           ) : (
-            <button></button>
+            <button
+              onClick={() => setNavBarOpen(false)}
+              className="text-slate-200 flex items-center px-2 py-1 border rounded border-slate-200 hover:text-white hover:border-white hover:scale-110"
+            >
+              <XMarkIcon className="w-5 h-5" />
+            </button>
           )}
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
