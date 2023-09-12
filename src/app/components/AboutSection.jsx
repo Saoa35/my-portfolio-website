@@ -22,8 +22,6 @@ const tabData = [
         <li>MongoDB</li>
         <li>NodeJs</li>
         <li>Git</li>
-        <li>Figma</li>
-        <li>Trello</li>
       </ul>
     ),
   },

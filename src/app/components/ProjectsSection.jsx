@@ -1,4 +1,5 @@
 import React from "react";
+import { ProjectCard } from "./ProjectCard";
 
 const projectsData = [
   {
@@ -53,7 +54,16 @@ export const ProjectsSection = () => {
   return (
     <>
       <h2>My projects</h2>
-      <div></div>
+      <div>
+        {projectsData.map((project) => (
+          <ProjectCard
+            key={project.id}
+            imgUrl={project.image}
+            title={project.title}
+            description={project.description}
+          />
+        ))}
+      </div>
     </>
   );
 };
