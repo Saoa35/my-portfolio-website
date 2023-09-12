@@ -52,7 +52,7 @@ const tabData = [
 ];
 
 export const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -105,7 +105,7 @@ export const AboutSection = () => {
             </TabButton>
           </div>
           <div className="mt-8">
-            {tabData.find((el) => el.id === tab).content}
+            {tabData.find((el) => el.id === tab)?.content}
           </div>
         </div>
       </div>
