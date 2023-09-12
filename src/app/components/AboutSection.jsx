@@ -1,10 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState, useTransition } from "react";
 
 export const AboutSection = () => {
-  const [tab, setTab] = "skills";
+  const [tab, setTab] = useState("skills");
+  const [isPending, startTransition] = useTransition();
+
+  const handleTabChange = (id) => {
+    startTransition(() => {
+      setTab(id);
+    });
+  };
 
   return (
     <section className="text-white">
@@ -30,11 +37,16 @@ export const AboutSection = () => {
             excited to work with others to create amazing applications.
           </p>
           <div className="flex flex-row mt-8">
-            <span className="mr-3 font-semibold hover:text-white text-[#ADB7BE] cursor-pointer border-b-2 border-blue-500">
+            {/* <span
+              onClick={() => handleTabChange("about")}
+              className="mr-3 font-semibold hover:text-white text-[#ADB7BE] cursor-pointer border-b-2 border-blue-500"
+            >
               Skills
+            </span> */}
+            <span onClick={() => handleTabChange("education")}>Education</span>
+            <span onClick={() => handleTabChange("experience")}>
+              Experience
             </span>
-            <span>Education</span>
-            <span>Experience</span>
           </div>
         </div>
       </div>
