@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { ProjectCard } from "./ProjectCard";
+import { ProjectTag } from "./ProjectTag";
 
 const projectsData = [
   {
@@ -24,12 +27,12 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Model Shop",
+    title: "Marketplace",
     description:
-      "Online shop website. Implemented adding items to cart and removing them, choosing it as favorite.",
-    image: "/images/projects/model-shop.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/Saoa35/model_shop",
+      "This is mobile app marketplace when you can Sign Up or Sign In, after authorization you can see all the products, also you can add your own product and delete it, you can change your profile settings which include avatar, name and phone number.",
+    image: "/images/projects/marketplace.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/Saoa35/marketplace-mobile-app",
     previewUrl: "/",
   },
   {
@@ -44,12 +47,12 @@ const projectsData = [
   },
   {
     id: 5,
-    title: "Food Restaurants",
+    title: "MyJornyFinances",
     description:
-      "This project implements the ability to select a product, add it to the cart, increasing or decreasing the quantity of goods, visualization of the total price and search for goods.",
-    image: "/images/projects/food-restaurantes.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/Saoa35/Food-Restaurants",
+      "This is a  React Native project. In this project was implemented firebase autorization and database.",
+    image: "/images/projects/myJourney.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/Saoa35/MyJornyFinances-mobile-app",
     previewUrl: "/",
   },
   {
@@ -62,24 +65,72 @@ const projectsData = [
     gitUrl: "https://github.com/Saoa35/photo_gallery",
     previewUrl: "https://photo-gallery-saoa35.vercel.app/",
   },
+  {
+    id: 7,
+    title: "FastyFood",
+    description:
+      "Food ordering mobile app. This is a React Native project, bootstrapped using @react-native-community/cli.",
+    image: "/images/projects/fastyfood.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/Saoa35/FastyFood-mobile-app",
+    previewUrl: "/",
+  },
+  {
+    id: 8,
+    title: "Food Restaurants",
+    description:
+      "This project implements the ability to select a product, add it to the cart, increasing or decreasing the quantity of goods, visualization of the total price and search for goods.",
+    image: "/images/projects/food-restaurantes.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Saoa35/Food-Restaurants",
+    previewUrl: "/",
+  },
+  {
+    id: 9,
+    title: "Food Restaurants",
+    description: "Online website for selling flying models",
+    image: "/images/projects/model-shop.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Saoa35/model_shop",
+    previewUrl: "/",
+  },
 ];
 
 export const ProjectsSection = () => {
+  const [tag, setTag] = useState("All");
+
+  const handleTagChange = (newTag) => {
+    setTag(newTag);
+  };
+
+  const filteredProjects = projectsData.filter((project) =>
+    project.tag.includes(tag)
+  );
+
   return (
     <>
       <h2 className="text-center text-4xl font-bold text-white mb-2">
         My projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-4 mb-2">
-        <button className="rounded-full border-2 border-blue-500 hover:border-white px-6 py-2 text-xl cursor-pointer">
-          All
-        </button>
-        <button className="rounded-full border-2 border-blue-500 hover:border-white px-6 py-2 text-xl cursor-pointer">
-          Web
-        </button>
+        <ProjectTag
+          onClick={handleTagChange}
+          name={"All"}
+          isSelected={tag === "All"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name={"Web"}
+          isSelected={tag === "Web"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name={"Mobile"}
+          isSelected={tag === "Mobile"}
+        />
       </div>
-      <div className="grid md:grid-cols-3 gap-8">
-        {projectsData.map((project) => (
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredProjects.map((project) => (
           <ProjectCard
             key={project.id}
             imgUrl={project.image}
