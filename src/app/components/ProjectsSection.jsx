@@ -87,7 +87,7 @@ const projectsData = [
   },
   {
     id: 9,
-    title: "Food Restaurants",
+    title: "Model Shop",
     description: "Online website for selling flying models",
     image: "/images/projects/model-shop.png",
     tag: ["All", "Web"],
