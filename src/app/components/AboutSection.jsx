@@ -30,9 +30,9 @@ const tabData = [
     id: "education",
     content: (
       <ul className="pl-2 list-disc">
-        <li>BINARY STUDIO ACADEMY</li>
-        <li>CYBER BIONIC SYSTEMATICS</li>
-        <li>NATIONAL TECHNICAL UNIVERSITY, Poltava, Ukraine</li>
+        <li>Binary Studio Academy</li>
+        <li>Cyber Bionic Systematics</li>
+        <li>National Technical University, Poltava, Ukraine</li>
       </ul>
     ),
   },

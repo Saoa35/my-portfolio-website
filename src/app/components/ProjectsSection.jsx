@@ -67,9 +67,17 @@ const projectsData = [
 export const ProjectsSection = () => {
   return (
     <>
-      <h2 className="text-center text-4xl font-bold text-white mt-4">
+      <h2 className="text-center text-4xl font-bold text-white mb-2">
         My projects
       </h2>
+      <div className="text-white flex flex-row justify-center items-center gap-2 py-4 mb-2">
+        <button className="rounded-full border-2 border-blue-500 px-6 py-2 text-xl cursor-pointer">
+          All
+        </button>
+        <button className="rounded-full border-2 border-blue-500 px-6 py-2 text-xl cursor-pointer">
+          Web
+        </button>
+      </div>
       <div className="grid md:grid-cols-3 gap-8">
         {projectsData.map((project) => (
           <ProjectCard
