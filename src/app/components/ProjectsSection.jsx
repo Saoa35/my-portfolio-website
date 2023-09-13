@@ -71,10 +71,10 @@ export const ProjectsSection = () => {
         My projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-4 mb-2">
-        <button className="rounded-full border-2 border-blue-500 px-6 py-2 text-xl cursor-pointer">
+        <button className="rounded-full border-2 border-blue-500 hover:border-white px-6 py-2 text-xl cursor-pointer">
           All
         </button>
-        <button className="rounded-full border-2 border-blue-500 px-6 py-2 text-xl cursor-pointer">
+        <button className="rounded-full border-2 border-blue-500 hover:border-white px-6 py-2 text-xl cursor-pointer">
           Web
         </button>
       </div>
