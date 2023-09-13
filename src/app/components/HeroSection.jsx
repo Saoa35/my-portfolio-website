@@ -9,7 +9,7 @@ export const HeroSection = () => {
     <section>
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left sm:mr-4">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+          <h1 className="text-white h-28 sm:h-36 lg:h-44 xl:h-fit mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-900">
               Hello, I`m{" "}
             </span>
