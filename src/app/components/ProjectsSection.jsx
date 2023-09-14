@@ -10,7 +10,7 @@ const projectsData = [
     id: 1,
     title: "Travel-Blog",
     description:
-      "The fullstack project implements registration, authorization, writing an article, adding photos to it, with the ability to edit the article, also you can add likes and comments. It was created by using technologies such as HTML, CSS, Tailwind, JS, React, ReactHooks, ReactRouterDom, ReduxToolkit, NodeJS, MongoDB.",
+      "This is the fullstack project implements registration, authorization, writing an article, adding photos to it, with the ability to edit the article, also you can add likes and comments.",
     image: "/images/projects/travel-blog.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Saoa35/Travel-Blog",
@@ -100,6 +100,7 @@ const projectsData = [
 export const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -109,8 +110,13 @@ export const ProjectsSection = () => {
     project.tag.includes(tag)
   );
 
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   return (
-    <>
+    <section>
       <h2 className="text-center text-4xl font-bold text-white mb-2">
         My projects
       </h2>
@@ -131,18 +137,25 @@ export const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map((project) => (
-          <ProjectCard
+          <motion.li
             key={project.id}
-            imgUrl={project.image}
-            title={project.title}
-            description={project.description}
-            gitUrl={project.gitUrl}
-            previewUrl={project.previewUrl}
-          />
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: project.id * 0.4 }}
+          >
+            <ProjectCard
+              imgUrl={project.image}
+              title={project.title}
+              description={project.description}
+              gitUrl={project.gitUrl}
+              previewUrl={project.previewUrl}
+            />
+          </motion.li>
         ))}
-      </div>
-    </>
+      </ul>
+    </section>
   );
 };
