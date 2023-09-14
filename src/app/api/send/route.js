@@ -8,7 +8,7 @@ const fromEmail = process.env.FROM_EMAIL;
 
 // export default async (req: NextApiRequest, res: NextApiResponse) => {
 export const POST = async (req, res) => {
-  const { body } = req;
+  const { body } = await req.json();
   const { email, subject, message } = body;
 
   try {

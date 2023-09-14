@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import GithubIcon from "../../../public/github.svg";
 import LinkedinIcon from "../../../public/linkedin.svg";
 import SkypeIcon from "../../../public/skype.svg";
@@ -7,6 +9,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const EmailSection = () => {
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -30,7 +34,9 @@ export const EmailSection = () => {
     const response = await fetch(endpoint, options);
     const resData = await response.json();
 
-    if (resData.status === "success") {
+    console.log(resData);
+
+    if (response.status === 200) {
       console.log("Message sent");
     }
   };
@@ -72,7 +78,7 @@ export const EmailSection = () => {
         </div>
       </div>
       <div className="z-10">
-        <form className="flex flex-col">
+        <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -82,6 +88,7 @@ export const EmailSection = () => {
             </label>
             <input
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              name="email"
               type="email"
               id="email"
               required
@@ -98,6 +105,7 @@ export const EmailSection = () => {
             <input
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
               type="text"
+              name="subject"
               id="subject"
               required
               placeholder="Hello..."
