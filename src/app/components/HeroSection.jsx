@@ -12,7 +12,7 @@ export const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.5 }}
           className="col-span-7 place-self-center text-center sm:text-left sm:mr-4"
         >
           <h1 className="text-white h-28 sm:h-36 lg:h-44 xl:h-fit mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
