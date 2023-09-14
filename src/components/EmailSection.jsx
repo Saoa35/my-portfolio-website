@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import GithubIcon from "../../../public/github.svg";
-import LinkedinIcon from "../../../public/linkedin.svg";
-import SkypeIcon from "../../../public/skype.svg";
-import TelegramIcon from "../../../public/telegram.svg";
+import GithubIcon from "../../public/github.svg";
+import LinkedinIcon from "../../public/linkedin.svg";
+import SkypeIcon from "../../public/skype.svg";
+import TelegramIcon from "../../public/telegram.svg";
 import Link from "next/link";
 import Image from "next/image";
 
