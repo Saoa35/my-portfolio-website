@@ -4,7 +4,10 @@ export const NavLink = ({ href, title }) => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
+      const yOffset = -100;
+      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
   };
 
