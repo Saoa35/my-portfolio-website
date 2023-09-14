@@ -116,7 +116,7 @@ export const ProjectsSection = () => {
   };
 
   return (
-    <section>
+    <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white mb-2">
         My projects
       </h2>

@@ -9,22 +9,20 @@ import { MenuOverlay } from "./MenuOverlay";
 const navLinks = [
   {
     title: "About",
-    path: "#about",
+    path: "about",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "projects",
   },
   {
     title: "Contacts",
-    path: "#contact",
+    path: "contact",
   },
 ];
 
-export const NavBar = ({ aboutRef, projectsRef, contactsRef }) => {
+export const NavBar = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
-
-  // const handleScroll = () => userRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
 
   return (
     <nav className="fixed md:px-5 lg:px-6 lg:py-4 xl:px-8 border border-[#33353F] top-0 left-0 right-0 z-50 bg-[#121212] bg-opacity-100">
