@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -42,9 +43,12 @@ export const HeroSection = () => {
               Hire Me
             </button> */}
             <button className="mt-3 px-1 py-1 rounded-full w-[70%] sm:w-fit bg-gradient-to-br from-blue-400 to-blue-900 hover:scale-110 hover:bg-slate-900 text-white">
-              <span className="block bg-[#121212] hover:bg-slate-700 rounded-full px-5 py-2">
+              <Link
+                href="https://drive.google.com/file/d/1k6XY-PbUHFJkLZTzJirJmXtoCqtxb6yO/view?usp=sharing"
+                className="block bg-[#121212] hover:bg-slate-700 rounded-full px-5 py-2"
+              >
                 Download CV
-              </span>
+              </Link>
             </button>
           </div>
         </motion.div>
