@@ -45,7 +45,7 @@ export const HeroSection = () => {
             >
               Hire Me
             </a> */}
-            <button className="mt-3 px-1 py-1 rounded-full w-[70%] sm:w-fit bg-gradient-to-br from-blue-400 to-blue-900 hover:scale-110 hover:bg-slate-900 text-white">
+            <button className="mt-3 px-1 py-1 rounded-full w-[70%] sm:w-fit bg-gradient-to-br from-blue-400 to-blue-900 hover:scale-105 hover:bg-slate-900 text-white">
               <Link
                 href="https://drive.google.com/file/d/1k6XY-PbUHFJkLZTzJirJmXtoCqtxb6yO/view?usp=sharing"
                 className="block bg-[#121212] hover:bg-slate-700 rounded-full px-5 py-2"

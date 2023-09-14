@@ -57,13 +57,19 @@ export const EmailSection = () => {
           contact with you.
         </p>
         <div className="socials flex flex-row gap-6">
-          <Link href="https://github.com/Saoa35">
+          <Link href="https://github.com/Saoa35" className="hover:scale-110">
             <Image src={GithubIcon} alt="Github Icon" width={40} height={40} />
           </Link>
-          <Link href="https://join.skype.com/invite/Akb6lZbgAL2D">
+          <Link
+            href="https://join.skype.com/invite/Akb6lZbgAL2D"
+            className="hover:scale-110"
+          >
             <Image src={SkypeIcon} alt="Skype Icon" width={40} height={40} />
           </Link>
-          <Link href="https://t.me/Alexandr_Makharadze">
+          <Link
+            href="https://t.me/Alexandr_Makharadze"
+            className="hover:scale-110"
+          >
             <Image
               src={TelegramIcon}
               alt="Telegram Icon"
@@ -71,7 +77,10 @@ export const EmailSection = () => {
               height={40}
             />
           </Link>
-          <Link href="https://www.linkedin.com/in/oleksandr-makharadze/">
+          <Link
+            href="https://www.linkedin.com/in/oleksandr-makharadze/"
+            className="hover:scale-110"
+          >
             <Image
               src={LinkedinIcon}
               alt="Linkedin Icon"
@@ -81,7 +90,7 @@ export const EmailSection = () => {
           </Link>
         </div>
       </div>
-      <div className="z-10">
+      {/* <div className="z-10">
         <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label
@@ -141,7 +150,8 @@ export const EmailSection = () => {
             </p>
           )}
         </form>
-      </div>
+      </div> */}
+      <div className="z-10"></div>
     </section>
   );
 };
