@@ -38,6 +38,7 @@ export const EmailSection = () => {
 
     if (response.status === 200) {
       console.log("Message sent");
+      setEmailSubmitted(true);
     }
   };
 
@@ -131,6 +132,11 @@ export const EmailSection = () => {
           >
             Send Message
           </button>
+          {emailSubmitted && (
+            <p className="text-sm mt-2 text-green-500">
+              Email sent successfuly!
+            </p>
+          )}
         </form>
       </div>
     </section>
