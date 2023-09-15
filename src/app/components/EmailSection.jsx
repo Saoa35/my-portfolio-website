@@ -5,6 +5,7 @@ import GithubIcon from "../../../public/github.svg";
 import LinkedinIcon from "../../../public/linkedin.svg";
 import SkypeIcon from "../../../public/skype.svg";
 import TelegramIcon from "../../../public/telegram.svg";
+import EmailIcon from "../../../public/email.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -42,6 +43,12 @@ export const EmailSection = () => {
     }
   };
 
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+
+    window.location.href = "mailto:saoamah@gmail.com";
+  };
+
   return (
     <section
       className="grid md:grid-cols-2 my-12 py-24 gap-4 relative"
@@ -49,7 +56,7 @@ export const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2"></div>
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Contact me</h5>
+        <h3 className="font-bold text-3xl text-white my-2">Contacts</h3>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           I am currently looking for new opportunities and I open for
           interesting proposals and ideas. Whether you have questions,
@@ -88,70 +95,24 @@ export const EmailSection = () => {
               height={40}
             />
           </Link>
+          <Link
+            href="mailto:saoamah@gmail.com"
+            className="hover:scale-110"
+            onClick={handleEmailClick}
+          >
+            <Image src={EmailIcon} alt="Email Icon" width={40} height={40} />
+          </Link>
         </div>
       </div>
-      {/* <div className="z-10">
-        <form className="flex flex-col" onSubmit={handleSubmit}>
-          <div className="mb-6">
-            <label
-              htmlFor="email"
-              className="text-white block text-sm font-medium mb-2"
-            >
-              Your email
-            </label>
-            <input
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              name="email"
-              type="email"
-              id="email"
-              required
-              placeholder="youremail@mail.com"
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="subject"
-              className="text-white block text-sm font-medium mb-2"
-            >
-              Subject
-            </label>
-            <input
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              type="text"
-              name="subject"
-              id="subject"
-              required
-              placeholder="Hello..."
-            />
-          </div>
-          <div className="mb-6">
-            <label
-              htmlFor="message"
-              className="text-white block text-sm font-medium mb-2"
-            >
-              Message
-            </label>
-            <textarea
-              name="message"
-              id="message"
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Message content..."
-            />
-          </div>
-          <button
-            type="submit"
-            className="bg-blue-900 hover:bg-blue-500 text-white font-medium py-2.5 px-5 rounded-lg w-full self-center"
-          >
-            Send Message
-          </button>
-          {emailSubmitted && (
-            <p className="text-sm mt-2 text-green-500">
-              Email sent successfuly!
-            </p>
-          )}
-        </form>
-      </div> */}
-      <div className="z-10"></div>
+      <div className="z-10 flex flex-col items-center mt-3">
+        <Image
+          src="/images/contact.jpg"
+          className="rounded-lg"
+          width={400}
+          height={400}
+          alt="Mail"
+        />
+      </div>
     </section>
   );
 };
