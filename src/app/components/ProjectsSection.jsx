@@ -18,6 +18,16 @@ const projectsData = [
   },
   {
     id: 2,
+    title: "Car rental",
+    description:
+      " This is NextJs project implements the ability to select a car for rent, pick it and observe all information about it,  you can search by type or model and filtr by fuel and year. Also pagination was added.",
+    image: "/images/projects/car-rent.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Saoa35/car_rental",
+    previewUrl: "https://car-rental-tau-nine.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Burger Lord",
     description:
       "This is Burger restaurant website. Implemented the ability to select a burger, plus an addition to it, also implemented a basket, where the number of selected burgers and the total amount of the selected product are counted, sorting and search are also implemented.",
@@ -27,7 +37,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Marketplace",
     description:
       "This is mobile app marketplace when you can Sign Up or Sign In, after authorization you can see all the products, also you can add your own product and delete it, you can change your profile settings which include avatar, name and phone number.",
@@ -37,7 +47,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Simple Chat",
     description:
       "This is a simple chat project, where you can register, and participate in simple conversation with other users. Multiple users can participate in a conversation at the same time.",
@@ -47,7 +57,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 5,
+    id: 6,
     title: "MyJornyFinances",
     description:
       "This is a  React Native project. In this project was implemented firebase autorization and database.",
@@ -57,7 +67,7 @@ const projectsData = [
     previewUrl: "/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Photo gallery",
     description:
       "Photo gallery website. You can select a photo and open it in a modal window in a larger size, also implemented searching and sorting by resort names. ",
@@ -67,7 +77,7 @@ const projectsData = [
     previewUrl: "https://photo-gallery-saoa35.vercel.app/",
   },
   {
-    id: 7,
+    id: 8,
     title: "FastyFood",
     description:
       "Food ordering mobile app. This is a React Native project, bootstrapped using @react-native-community/cli.",
@@ -76,16 +86,16 @@ const projectsData = [
     gitUrl: "https://github.com/Saoa35/FastyFood-mobile-app",
     previewUrl: "/",
   },
-  {
-    id: 8,
-    title: "Food Restaurants",
-    description:
-      "This project implements the ability to select a product, add it to the cart, increasing or decreasing the quantity of goods, visualization of the total price and search for goods.",
-    image: "/images/projects/food-restaurantes.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/Saoa35/Food-Restaurants",
-    previewUrl: "/",
-  },
+  // {
+  //   id: 8,
+  //   title: "Food Restaurants",
+  //   description:
+  //     "This project implements the ability to select a product, add it to the cart, increasing or decreasing the quantity of goods, visualization of the total price and search for goods.",
+  //   image: "/images/projects/food-restaurantes.png",
+  //   tag: ["All", "Web"],
+  //   gitUrl: "https://github.com/Saoa35/Food-Restaurants",
+  //   previewUrl: "/",
+  // },
   {
     id: 9,
     title: "Model Shop",
