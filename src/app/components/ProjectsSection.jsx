@@ -86,16 +86,6 @@ const projectsData = [
     gitUrl: "https://github.com/Saoa35/FastyFood-mobile-app",
     previewUrl: "/",
   },
-  // {
-  //   id: 8,
-  //   title: "Food Restaurants",
-  //   description:
-  //     "This project implements the ability to select a product, add it to the cart, increasing or decreasing the quantity of goods, visualization of the total price and search for goods.",
-  //   image: "/images/projects/food-restaurantes.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "https://github.com/Saoa35/Food-Restaurants",
-  //   previewUrl: "/",
-  // },
   {
     id: 9,
     title: "Model Shop",
