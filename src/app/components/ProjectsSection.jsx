@@ -10,7 +10,7 @@ const projectsData = [
     id: 1,
     title: "Travel-Blog",
     description:
-      "This is the fullstack project implements registration, authorization, writing an article, adding photos to it, with the ability to edit the article, also you can add likes and comments.",
+      "This is the React, NodeJs fullstack project implements registration, authorization, writing an article, adding photos to it, with the ability to edit the article, also you can add likes and comments.",
     image: "/images/projects/travel-blog.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Saoa35/Travel-Blog",
@@ -30,7 +30,7 @@ const projectsData = [
     id: 3,
     title: "Burger Lord",
     description:
-      "This is Burger restaurant website. Implemented the ability to select a burger, plus an addition to it, also implemented a basket, where the number of selected burgers and the total amount of the selected product are counted, sorting and search are also implemented.",
+      "This is Burger restaurant website. It was created on Reactjs. Implemented the ability to select a burger, plus an addition to it, also implemented a basket, where the number of selected burgers and the total amount of the selected product are counted, sorting and search are also implemented.",
     image: "/images/projects/burger-lord.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Saoa35/burger_lord",
