@@ -40,7 +40,7 @@ const projectsData = [
     id: 4,
     title: "Marketplace",
     description:
-      "This is mobile app marketplace when you can Sign Up or Sign In, after authorization you can see all the products, also you can add your own product and delete it, you can change your profile settings which include avatar, name and phone number.",
+      "This is React Native mobile app marketplace when you can Sign Up or Sign In, after authorization you can see all the products, also you can add your own product and delete it, you can change your profile settings which include avatar, name and phone number.",
     image: "/images/projects/marketplace.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/Saoa35/marketplace-mobile-app",
@@ -50,7 +50,7 @@ const projectsData = [
     id: 5,
     title: "Simple Chat",
     description:
-      "This is a simple chat project, where you can register, and participate in simple conversation with other users. Multiple users can participate in a conversation at the same time.",
+      "This is a simple NodeJs, Socket.IO chat project, where you can register, and participate in simple conversation with other users. Multiple users can participate in a conversation at the same time.",
     image: "/images/projects/chat1.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Saoa35/Simple_Chat",
@@ -88,12 +88,13 @@ const projectsData = [
   },
   {
     id: 9,
-    title: "Model Shop",
-    description: "Online website for selling flying models",
-    image: "/images/projects/model-shop.png",
+    title: "Ecommerce",
+    description:
+      "This is NextJs ecommerce project. Implemented displaying of a list of products, selection and viewing of a specific product, as well as the appearance of a modal window with a description of the product.",
+    image: "/images/projects/ecommerce.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/Saoa35/model_shop",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Saoa35/ecommere-marketplace",
+    previewUrl: "https://ecommerce-iota-cyan.vercel.app/",
   },
 ];
 
