@@ -99,7 +99,7 @@ export const AboutSection = () => {
               selectTab={() => handleTabChange("sertificates")}
               active={tab === "sertificates"}
             >
-              Sertificates
+              Certificates
             </TabButton>
           </div>
           <div className="mt-8">

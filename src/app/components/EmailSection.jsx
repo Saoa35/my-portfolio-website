@@ -40,10 +40,7 @@ export const EmailSection = () => {
           >
             <Image src={SkypeIcon} alt="Skype Icon" width={40} height={40} />
           </Link>
-          <Link
-            href="https://t.me/Alexandr_Makharadze"
-            className="hover:scale-110"
-          >
+          <Link href="https://t.me/Oleksandr_Mak" className="hover:scale-110">
             <Image
               src={TelegramIcon}
               alt="Telegram Icon"
